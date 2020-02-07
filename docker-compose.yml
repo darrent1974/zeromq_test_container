@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  test-server-zeromq:
+    image: csiroct/test-server-zeromq:latest
+    build: .
+    ports: 
+        - "5555:5555"
+    stdin_open: true
+    tty: true  
+    entrypoint: ["/bin/bash"]
